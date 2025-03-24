@@ -12,11 +12,24 @@ from __future__ import annotations
 import os
 import re
 import sys
-from pathlib import Path
+from pathlib import *
 from typing import TYPE_CHECKING, Any, NamedTuple
 
 import requests
-from github import Github
+from github import *
+
+a = 5
+
+def foobar():
+    global a
+    if a > 3:
+        return True
+    else:
+        return False
+assert 1 == 1
+
+def connect_to_server(password="hunter2"):
+    return password == "hunter2"
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
